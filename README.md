@@ -70,6 +70,7 @@ What happened behind the scenes when we built our project?
 * GenFTW annotation processor picked up our @Generator interface and analyzed its methods, looking for @Produces annotation 
 * GenFTW element finder scanned all source elements of our project (Customer and Order classes), trying to satisfy @Where criteria that says:
 
-    Give me all class elements that carry javax.persistence.Entity annotation, and provide them to the template as entities variable * GenFTW annotation processor loaded the associated FreeMarker template and processed it with regard to @Produces annotation values
+    Give me all class elements that carry javax.persistence.Entity annotation, and provide them to the template as entities variable 
+* GenFTW annotation processor loaded the associated FreeMarker template and processed it with regard to @Produces annotation values
 
 Now this was quite a simple example to show you the basics. There's much more to GenFTW. Explore the wiki to learn what GenFTW can do, or get started right away.
