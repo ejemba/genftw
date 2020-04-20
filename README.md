@@ -26,9 +26,19 @@ How much code does it take to write our custom generator?
 
 Step one, generator descriptor (Java interface with some GenFTW annotations):
 
-``` @Generator public interface JpaPersistenceXmlGenerator {
+``` 
+@Generator 
+public interface JpaPersistenceXmlGenerator {
 
-@Produces(output = "META-INF/persistence.xml", template = "com/myproject/templates/persistence.xml.ftl") @ForAllElements(@Where( kind = ElementKind.CLASS, annotations = "javax.persistence.Entity", matchResultVariable = "entities")) void generatePersistenceXml();
+@Produces  ( output = "META-INF/persistence.xml", template = "com/myproject/templates/persistence.xml.ftl") 
+@ForAllElements( 
+   @Where(
+      kind = ElementKind.CLASS, 
+      annotations = "javax.persistence.Entity", 
+      matchResultVariable = "entities"
+   )
+) 
+void generatePersistenceXml();
 
 } 
 ```
